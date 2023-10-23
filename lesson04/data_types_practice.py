@@ -1,3 +1,5 @@
+import math  # Imports go at the top of the file
+
 # String data type
 
 # Literal assignment of values
@@ -94,7 +96,7 @@ print(first.endswith("B"))  # Return False
 # Boolean Data Type
 myvalue = True
 x = bool(False)
-print(type(x))  # <class 'bool>
+print(type(x))  # <class 'bool'>
 print(isinstance(myvalue, bool))  # True
 
 # integer type
@@ -102,3 +104,37 @@ price = 100
 best_price = int(80)
 print(type(price))  # <class 'int>
 print(isinstance(price, int))  # True
+
+# float type
+gpa = 3.28
+y = float(1.14)
+print(type(gpa))  # <class 'float'>
+print(isinstance(y, float))  # True
+
+# complex type
+comp_value = 5 + 3j
+print(type(comp_value))  # <class 'complex'>
+print(comp_value.real)  # 5.0
+print(comp_value.imag)  # 3.0
+
+# Built-in Fnctions for number
+
+print(abs(gpa))  # 3.28
+print(abs(gpa * -1))  # 3.28
+
+print(round(gpa))  # 3
+
+print(round(gpa, 1))  # 3.3 rounds to nearest decimal place
+
+print(math.pi)  # 3.141592653589793
+print(math.sqrt(64))  # 8.0
+print(math.ceil(gpa))  # 4 rounds up
+print(math.floor(gpa))  # 3 rounds down
+
+# Casting a string to a number
+zipcode = "11111"
+zip_value = int(zipcode)
+print(type(zip_value))  # <class 'int'>
+
+# Error if you attempt to cast incorrect data
+# zip_value = int("Seattle") =  Invalid literal
