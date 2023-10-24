@@ -146,7 +146,7 @@ myNewSet = one.union(two)
 print(myNewSet)
 
 # Keep only the duplicate values of the two sets
-# Changing the first set
+# Changing the first set "one"
 one = {1, 2, 3}
 two = {2, 3, 4}
 
@@ -154,7 +154,7 @@ one.intersection_update(two)
 print(one)  # {2, 3}
 
 # Keep everything except the duplicates
-# Changing the first set
+# Changing the first set "one"
 one = {1, 2, 3}
 two = {2, 3, 4}
 
