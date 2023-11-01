@@ -38,12 +38,13 @@ def rps():
         # Turning the string into an int data type with int()
         computer = int(computerChoice)
 
-        # These line will print the player and computer choice
-        print("\nYou chose " + str(RPS(player)).replace('RPS.', '').title() + ".")
-        print("Python chose " + str(RPS(computer)
-                                    ).replace('RPS.', '').title() + ".\n")
+        # These line will print the player and computer choice using the format method
+        print(f"\nYou chose {str(RPS(player)).replace('RPS.', '').title()}.")
+        print(
+            f"Python chose {str(RPS(computer)).replace('RPS.', '').title()}.\n")
 
         # if statement to check if user chooses 1(rock) and comp chooses 3(scissors) user will and so on for the rest of the values
+
         def decide_winner(player, computer):
             # brining in outside variables to be modified
             nonlocal player_wins
@@ -75,10 +76,10 @@ def rps():
         # incrementing the amount of games played
         game_count += 1
 
-        # Printing the game count with variable game_count, player_wins, python_wins value and converting it into a string
-        print("\n Game count: " + str(game_count))
-        print("\n Player wins: " + str(player_wins))
-        print("\n Python wins: " + str(python_wins))
+        # Printing the game count with variable game_count, player_wins, python_wins value and converting it into a string. using the format method {}
+        print(f"\n Game count: {str(game_count)}")
+        print(f"\n Player wins: {str(player_wins)}")
+        print(f"\n Python wins: {str(python_wins)}")
 
         print("\n Play again?")
         # Creating an object names play_again and asking the user if they want to keep playing Y for yes and Q for quit
@@ -104,6 +105,9 @@ def rps():
 
 
 # calling the function rps()
-play = rps()
+# Using a closure
+rock_paper_scissors = rps()
 
-play()
+# This will only execute if we are in the rps7_practice.py file
+if __name__ == "__main__":
+    rock_paper_scissors()
