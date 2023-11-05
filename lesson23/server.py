@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from weather import get_current_weather
+from weather import get_weather
 from waitress import serve
 
 app = Flask(__name__)
@@ -12,15 +12,14 @@ def index():
 
 
 @app.route('/weather')
-def get_weather():
+def get_current_weather():
     city = request.args.get('city')
 
-    # Check for empty strings or string with only spaces
+    # Check for empty string or string with only spaces
     if not bool(city.strip()):
-        # You could render "City Not Found" instead like we do below
-        city = "Kansas City"
+        city = "San Diego"
 
-    weather_data = get_current_weather(city)
+    weather_data = get_weather(city)
 
     # City is not found by API
     if not weather_data['cod'] == 200:
