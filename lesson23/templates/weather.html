@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} Weather</title>
+    <!-- Linking the style.css file -->
     <link
       href="{{ url_for('static', filename='css/style.css') }}"
       rel="stylesheet"
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+    <!-- Using double curly braces to display the data received from the weather API. -->
     <h1>{{ title }} Weather</h1>
     <p>{{ status }} and {{ temp }} &deg;</p>
     <p>Feels like {{ feels_like }} &deg;</p>
